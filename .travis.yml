@@ -8,6 +8,8 @@ cache:
 before_install:
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - npm i -D uglifyjs-webpack-plugin
+- docker stop se234-lab10-client
+- docker rm se234-lab10-client
 install:
 - npm install
 - npm run ng-deploy
